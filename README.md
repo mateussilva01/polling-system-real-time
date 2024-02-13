@@ -2,6 +2,10 @@
 
 A real-time voting system where users can create a poll and other users can cast their votes. The system generates a ranking among the options and updates the votes in real-time.
 
+## Screenshots
+
+![1.png](src/img/voteonpoll-ws.png)
+
 ## Requisites
 
 - Docker;
@@ -26,12 +30,12 @@ Create a new poll.
 
 ```json
 {
-  "title": "Qual a melhor linguagem de programação?",
+  "title": "Qual o melhor framework Node.js?",
   "options": [
-    "JavaScript",
-    "Java",
-    "PHP",
-    "C#"
+    "Express",
+    "Fastify",
+    "NestJS",
+    "HapiJS"
   ]
 }
 ```
@@ -40,7 +44,7 @@ Create a new poll.
 
 ```json
 {
-  "pollId": "194cef63-2ccf-46a3-aad1-aa94b2bc89b0"
+  "pollId": "f69fef07-6702-4f06-ac1e-3671dcb60514"
 }
 ```
 
@@ -52,32 +56,32 @@ Return data from a single poll.
 
 ```json
 {
-	"poll": {
-		"id": "e4365599-0205-4429-9808-ea1f94062a5f",
-		"title": "Qual a melhor linguagem de programação?",
-		"options": [
-			{
-				"id": "4af3fca1-91dc-4c2d-b6aa-897ad5042c84",
-				"title": "JavaScript",
-				"score": 1
-			},
-			{
-				"id": "780b8e25-a40e-4301-ab32-77ebf8c79da8",
-				"title": "Java",
-				"score": 0
-			},
-			{
-				"id": "539fa272-152b-478f-9f53-8472cddb7491",
-				"title": "PHP",
-				"score": 0
-			},
-			{
-				"id": "ca1d4af3-347a-4d77-b08b-528b181fe80e",
-				"title": "C#",
-				"score": 0
-			}
-		]
-	}
+   "poll":{
+      "id":"f69fef07-6702-4f06-ac1e-3671dcb60514",
+      "title":"Qual o melhor framework Node.js?",
+      "options":[
+         {
+            "id":"ea19a517-da23-41d5-86ad-222945b2fdd7",
+            "title":"Express",
+            "score":0
+         },
+         {
+            "id":"0d69f658-066c-4142-93b5-519b3dda9792",
+            "title":"Fastify",
+            "score":1
+         },
+         {
+            "id":"1ad6b046-9fc3-425f-ad8c-dcaccbde7b69",
+            "title":"NestJS",
+            "score":0
+         },
+         {
+            "id":"45344819-8faf-4076-b9fb-d5d11fccc5d8",
+            "title":"HapiJS",
+            "score":0
+         }
+      ]
+   }
 }
 ```
 
@@ -89,7 +93,7 @@ Add a vote to specific poll.
 
 ```json
 {
-  "pollOptionId": "31cca9dc-15da-44d4-ad7f-12b86610fe98"
+  "pollOptionId": "0d69f658-066c-4142-93b5-519b3dda9792"
 }
 ```
 
@@ -101,8 +105,8 @@ Add a vote to specific poll.
 
 ```json
 {
-  "pollOptionId": "da9601cc-0b58-4395-8865-113cbdc42089",
-  "votes": 2
+  "pollOptionId": "0d69f658-066c-4142-93b5-519b3dda9792",
+  "votes": 1
 }
 ```
 <!--START_SECTION:footer-->
